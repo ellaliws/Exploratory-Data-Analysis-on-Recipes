@@ -8,27 +8,30 @@ Analysis Question: What is the relationship between the cooking time and average
 
 Why should readers of your website care about the dataset and your question specifically?
 Report the number of rows in the dataset, the names of the columns that are relevant to your question, and 
+
 ### descriptions of relevant columns:
 `'name'` : Recipe name
 `'id'`
 `'rating'` 
 `'minutes'`
-| **Column**        | **Description**                      |
-|:------------------|-------------------------------------:|
-| 'name'            | Recipe name                          |
-| `'id'`            | Recipe ID                            |
-| `'rating'`        | Average Rating of the recipe         |
-| `'minutes'`       | Minutes to prepare recipe            |
+| **Column**        | **Description**                         |
+|:------------------|----------------------------------------:|
+| `'name'`          | Recipe name                             |
+| `'id'`            | Recipe ID                               |
+| `'rating'`        | Average Rating of the recipe as floats  |
+| `'minutes'`       | Minutes to prepare recipe as integers   |
 
 ---
+
 ## Cleaning and EDA
 ### Data Cleaning
-data cleaning steps: \n
-1.
-2.
-3.
+#### Data Cleaning Steps: 
+1.  In the getting the data part, we have two dataframes, `'recipes'` and `'interactions'`. Left merge them.
+2.  In the merged dataset, fill all ratings of 0 with np.nan. This is **neccessary** because if a recipe is rated 0, a review that rates the recipe may entered the rating or may not. So it can be seen as a column containing missing values.
+3.  Find the average rating of invidividual recipes and add this Series as `'rating'` column to recipes dataframe. We will use the average rating `'rating'` in the analysis part.
+4. Originally, `'nutrition'` contains nutritions as a list of values. We create individual columns for every unique nutritions.
 
-cleaned dataframe
+#### Cleaned Dataframe
 
 |    | name                                 |     id |   minutes |   rating | rating > 3   |
 |---:|:-------------------------------------|-------:|----------:|---------:|:-------------|

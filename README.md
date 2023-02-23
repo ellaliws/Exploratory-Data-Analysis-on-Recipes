@@ -21,6 +21,7 @@ fig = px.histogram(df2, x="minutes", color='rating > 3', histnorm='probability',
 fig.write_html('Exploratory-Data-Analysis-on-Recipes', include_plotlyjs='cdn')            
 
 `
+interactions.head().to_markdown()
 # Assessment of Missingness
 
 # Hypothesis Testing

@@ -14,7 +14,7 @@ Report the number of rows in the dataset, the names of the columns that are rele
 `'id'`
 `'rating'` 
 `'minutes'`
-| **Column**        | **Description**                         |
+| Column            | Description                             |
 |:------------------|----------------------------------------:|
 | `'name'`          | Recipe name                             |
 | `'id'`            | Recipe ID                               |

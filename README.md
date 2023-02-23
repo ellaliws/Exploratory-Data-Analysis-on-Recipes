@@ -13,7 +13,7 @@ import plotly.express as px
 pd.options.plotting.backend = 'plotly'
 fp = os.path.join('food_data','RAW_interactions.csv')
 interactions = pd.read_csv(fp)
-interactions
+interactions.to_markdown()
 
 fig = px.histogram(df2, x="minutes", color='rating > 3', histnorm='probability', marginal='box', 
              title="Minutes of recipes by Rating", barmode='overlay', opacity=0.7, nbins = 40)

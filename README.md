@@ -30,17 +30,18 @@ Report the number of rows in the dataset, the names of the columns that are rele
 2.  In the merged dataset, fill all ratings of 0 with np.nan. This is **neccessary** because if a recipe is rated 0, a review that rates the recipe may entered the rating or may not. So it can be seen as a column containing missing values.
 3.  Find the average rating of invidividual recipes and add this Series as `'rating'` column to recipes dataframe. We will use the average rating `'rating'` in the analysis part.
 4. Originally, `'nutrition'` contains nutritions as a list of values. We create individual columns for every unique nutritions.
+5. We create the column `'rating > 3'`, which stores boolean values to indicate whether the rating is greater than 3. If rating is greater than 3, we define it as a high-rating recipe, otherwise a low-rating recipe. This information will be used in our analysis. 
+6. For our Bivariate Analysis, we care whether a recipe's calories is high or low. We define a recipe that has at least 400 calores to be a high-calorie recipe. Therefore, we create a column high_calories, which stores boolean values to indicate whether the recipe is a high-calorie recipe or not.
 
 #### Cleaned Dataframe
 
-|    | name                                 |     id |   minutes |   rating | rating > 3   |
-|---:|:-------------------------------------|-------:|----------:|---------:|:-------------|
-|  0 | 1 brownies in the world    best ever | 333281 |        40 |        4 | True         |
-|  1 | 1 in canada chocolate chip cookies   | 453467 |        45 |        5 | True         |
-|  2 | 412 broccoli casserole               | 306168 |        40 |        5 | True         |
-|  3 | millionaire pound cake               | 286009 |       120 |        5 | True         |
-|  4 | 2000 meatloaf                        | 475785 |        90 |        5 | True         |
-
+|    | name                                 |     id |   minutes |   rating | rating > 3   |   calories (#) | high_calories   |
+|---:|:-------------------------------------|-------:|----------:|---------:|:-------------|---------------:|:----------------|
+|  0 | 1 brownies in the world    best ever | 333281 |        40 |        4 | True         |          138.4 | False           |
+|  1 | 1 in canada chocolate chip cookies   | 453467 |        45 |        5 | True         |          595.1 | True            |
+|  2 | 412 broccoli casserole               | 306168 |        40 |        5 | True         |          194.8 | False           |
+|  3 | millionaire pound cake               | 286009 |       120 |        5 | True         |          878.3 | True            |
+|  4 | 2000 meatloaf                        | 475785 |        90 |        5 | True         |          267   | False           |
 
 ### Univariate Analysis
 plot
@@ -49,21 +50,24 @@ plot
 plot
 <iframe src="assets/bivariate_plot.html" width=800 height=600 frameBorder=0></iframe>
 </iframe>
+**explanation**
+The distributions of minutes between high_rating recipes and low_rating recipes are similar. In other words, no matter the recipe is rated high or low, they have similar trend that most recipes take under 60 minutes, and there are fewer recipes that take longer time. There is no obvious differences between high and low ratings of a recipe by looking at how long it takes.
 
-1-2 sentence explanation about your plot(making sure to describe and interpret any trends present)
-
+(1-2 sentence explanation about your plot(making sure to describe and interpret any trends present)
 
 ### Interesting Aggregates
+
 
 ## Assessment of Missingness
 ---
 ## Hypothesis Testing
-null hypothesis:
-alternative hypothesis: 
-test statistic:
-significance level
-the resulting p-value:
-your conclusion. 
+#### **Null Hypothesis**: 
+#### **Alternative Hypothesis**: 
+#### **Test Statistic**:
+#### **Significance level**: 
+0.01(1%)
+#### **the resulting p-value**:
+#### Conclusion: 
 
 **Justify** why these choices are good choices for answering the question you are trying to answer.
 

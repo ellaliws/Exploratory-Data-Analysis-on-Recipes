@@ -19,6 +19,7 @@ data cleaning steps: \n
 3.
 
 cleaned dataframe
+
 |    | name                                 |     id |   minutes |   rating | rating > 3   |
 |---:|:-------------------------------------|-------:|----------:|---------:|:-------------|
 |  0 | 1 brownies in the world    best ever | 333281 |        40 |        4 | True         |

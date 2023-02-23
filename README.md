@@ -33,7 +33,7 @@ plot
 1-2 sentence explanation about your plot
 ### Bivariate Analysis
 plot
-<iframe src="assets/10-80-enrollment.html" width=800 height=600 frameBorder=0>
+<iframe src="assets/bivariate_plot.html" width=800 height=600 frameBorder=0></iframe>
 </iframe>
 
 1-2 sentence explanation about your plot(making sure to describe and interpret any trends present)

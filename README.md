@@ -3,12 +3,22 @@ a project for DSC 80 at UCSD
 ---
 ## Introduction
 introduction to your dataset
-Analysis Question: 
+Analysis Question: What is the relationship between the cooking time and average rating of recipes? Do recipes have higher ratings tend to take shorter time than the recipes of lower ratings? (Do recipes that take shorter time have higher ratings?)
+
 
 Why should readers of your website care about the dataset and your question specifically?
-Report the number of rows in the dataset, the names of the columns that are relevant to your question, and descriptions of those relevant columns.
-'''rating''' 
-'''minutes'''
+Report the number of rows in the dataset, the names of the columns that are relevant to your question, and 
+### descriptions of relevant columns:
+`'name'` : Recipe name
+`'id'`
+`'rating'` 
+`'minutes'`
+| **Column**        | **Description**                      |
+|:------------------|-------------------------------------:|
+| 'name'            | Recipe name                          |
+| `'id'`            | Recipe ID                            |
+| `'rating'`        | Average Rating of the recipe         |
+| `'minutes'`       | Minutes to prepare recipe            |
 
 ---
 ## Cleaning and EDA

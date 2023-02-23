@@ -2,9 +2,23 @@
 a project for DSC 80 at UCSD
 ---
 ## Introduction
+introduction to your dataset
+Analysis Question: 
+
+Why should readers of your website care about the dataset and your question specifically?
+Report the number of rows in the dataset, the names of the columns that are relevant to your question, and descriptions of those relevant columns.
+'''rating''' 
+'''minutes'''
+
 ---
 ## Cleaning and EDA
+### Data Cleaning
+data cleaning steps: \n
+1.
+2.
+3.
 
+cleaned dataframe
 |    | name                                 |     id |   minutes |   rating | rating > 3   |
 |---:|:-------------------------------------|-------:|----------:|---------:|:-------------|
 |  0 | 1 brownies in the world    best ever | 333281 |        40 |        4 | True         |
@@ -14,8 +28,29 @@ a project for DSC 80 at UCSD
 |  4 | 2000 meatloaf                        | 475785 |        90 |        5 | True         |
 
 
+### Univariate Analysis
+plot
+1-2 sentence explanation about your plot
+### Bivariate Analysis
+plot
+<iframe src="assets/10-80-enrollment.html" width=800 height=600 frameBorder=0>
+</iframe>
+
+1-2 sentence explanation about your plot(making sure to describe and interpret any trends present)
+
+
+### Interesting Aggregates
+
 ## Assessment of Missingness
 ---
 ## Hypothesis Testing
+null hypothesis:
+alternative hypothesis: 
+test statistic:
+significance level
+the resulting p-value:
+your conclusion. 
+
+**Justify** why these choices are good choices for answering the question you are trying to answer.
 
 ---

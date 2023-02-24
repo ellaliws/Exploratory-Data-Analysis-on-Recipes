@@ -1,5 +1,5 @@
 # Data Analysis on Recipes Rating and Preparation Time
-A project for DSC 80 at UCSD. A direction to pick up a good recipe💓
+A project for DSC 80 at UCSD. Some good advice to pick a good recipe💓
 
 ---
 ## Introduction

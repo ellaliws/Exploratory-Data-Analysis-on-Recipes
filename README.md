@@ -48,14 +48,17 @@ Report the number of rows in the dataset, the names of the columns that are rele
 |  4 | 2000 meatloaf                        | 475785 |        90 |        5 | True         |          267   | False           |
 
 ### Univariate Analysis
-#### Plot
+#### Plot: 
 1-2 sentence explanation about your plot
-<iframe src="assets/rating_plot.html" width=650 height=400 frameBorder=0></iframe>
-<iframe src="assets/plot_min.html" width=650 height=400 frameBorder=0></iframe>
+<iframe src="assets/rating_plot.html" width=700 height=400 frameBorder=0></iframe>
+**Explanation:** The average of mean rating for all recipes is 4.63, the distribution is left skewed, majority of the ratings are positive. 
+
+<iframe src="assets/plot_min.html" width=700 height=400 frameBorder=0></iframe>
+**Explanation:** mean after removing outlier is 38.68, the distribution is right skewed, majority of recipes take less than one hour to prepare
 
 ### Bivariate Analysis
 plot
-<iframe src="assets/bivariate_plot.html" width=650 height=400 frameBorder=0></iframe>
+<iframe src="assets/bivariate_plot.html" width=700 height=400 frameBorder=0></iframe>
 
 **explanation**
 The distributions of minutes between high_rating recipes and low_rating recipes are similar. In other words, no matter the recipe is rated high or low, they have similar trend that most recipes take under 60 minutes, and there are fewer recipes that take longer time. There is no obvious differences between high and low ratings of a recipe by looking at how long it takes.
@@ -78,7 +81,7 @@ K-S statistic
 ks_2samp(recipes_df.loc[recipes_df['description missing'] == True, 'n_steps'], recipes_df.loc[recipes_df['description missing'] == False, 'n_ingredients'])
 ```
 #### Plot
-<iframe src="assets/ms_depend_plot.html" width=650 height=400 frameBorder=0></iframe>
+<iframe src="assets/ms_depend_plot.html" width=700 height=400 frameBorder=0></iframe>
  
 ---
 ## Hypothesis Testing

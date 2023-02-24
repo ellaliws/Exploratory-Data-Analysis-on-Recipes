@@ -72,12 +72,14 @@ We believe the `'rating'` column is not missing at random(NMAR), the chance that
 any additional data you might want to obtain that could explain the missingness (thereby making it MAR).
 
 ### Missingness Dependency
-K-S statistic
+#### Comparing null and non-null `'description'` distributions for `'n_ingredients'`
+We use **K-S statistic** to identify missingness of `'description'` 
 #### Results of Missingness Permutation Tests
 ```py
 ks_2samp(recipes_df.loc[recipes_df['description missing'] == True, 'n_steps'], recipes_df.loc[recipes_df['description missing'] == False, 'n_ingredients'])
 ```
-#### Plot
+#### Plot: 
+<iframe src="assets/ks_fig.html" width=700 height=400 frameBorder=0></iframe>
 <iframe src="assets/ms_depend_plot.html" width=700 height=400 frameBorder=0></iframe>
  
 ---

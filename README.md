@@ -106,9 +106,9 @@ The distribution for high rating recipes's minutes to prepare and low rating rec
 #### **Significance level**: 
 0.05(or 5%)
 #### **the resulting p-value**: 
-6.5 * 10^-27
+0.0
 #### Conclusion: 
-p value is less than the threshold of 0.05 therefore we reject the null. There is likely a relationship between recipes's rating and recipes.
+p value is close to 0.0 is less than the threshold of 0.05 therefore we reject the null. There is likely a relationship between recipes's rating and recipes.
 
 **Justify** why these choices are good choices for answering the question you are trying to answer.
 

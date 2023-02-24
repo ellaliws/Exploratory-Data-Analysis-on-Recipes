@@ -12,6 +12,7 @@ We have 83782 **rows** in the dataset, and the relevant columns are
 - `'id'`: Recipe ID
 - `'rating'` : Average Rating of the recipe as floats
 - `'minutes'` : Minutes to prepare recipe as integers
+- `'nutrition'` : Nutrition information in the form [calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV), carbohydrates (PDV)]; PDV stands for “percentage of daily value”
 
 ---
 
@@ -45,7 +46,7 @@ we care about the distribution of rating and minutes to answer our analysis ques
 **Explanation:** mean after removing outlier is 38.68, the distribution is right skewed, majority of recipes take less than one hour to prepare
 
 ### Bivariate Analysis
-plot
+Plot the distributions of minutes of high_rating and low_rating recipes
 <iframe src="assets/bivariate_plot.html" width=700 height=400 frameBorder=0></iframe>
 
 **explanation**
@@ -67,9 +68,10 @@ The pivot table shows that it does seem like there is a trend where the higher r
 
 ## Assessment of Missingness
 ### NMAR Analysis
-We believe the `'rating'` column is not missing at random(NMAR), the chance that a value is missing depends on the actual missing value. For example, the user is less likely to fill in a 3 when they feel neutral towards the recipe, compared to 5 and 1 when they are extremely satified or dissatisfied.
+We believe the `'rating'` column is not missing at random(NMAR), the chance that a value is missing depends on the actual missing value. In our Data Generating Process, we first filled all 0 ratings with np.nan and then get the average rating in `'rating'` column. Thus, `'rating'` of a recipe is missing if a recipe has no reviews with any rating. The probability that a users leave no rating for a recipe is likely to depends on the intended rating itself.
+For example, the user is less likely to fill in a 3 when they feel neutral towards the recipe, compared to 5 and 1 when they are extremely satified or dissatisfied. 
 
-any additional data you might want to obtain that could explain the missingness (thereby making it MAR).
+**additional data you to obtain that could explain the missingness:** If the reviews came with tags the reviewer can select, it will likely turn rating into an MAR column. For example, a review with **"delicious"** tag is less likely to be missing its rating. 
 
 ### Missingness Dependency
 
@@ -77,24 +79,26 @@ any additional data you might want to obtain that could explain the missingness 
 We use **K-S statistic** to identify missingness of `'description'` 
 In our permutation test of testing `'description'`'s missingness dependency on `'n_ingredients'`
 Our null hypothesis is: `'description'` missingness does not depend on `'n_ingredients'`
-We get p-value about 0.01, we reject null hypothesis, we can conclude that description missingness likely depends on n_ingredients.
+
 
 #### Results of Missingness Permutation Tests
 
 Plot of K-S Distribution: 
 <iframe src="assets/ks_fig.html" width=700 height=400 frameBorder=0></iframe>
 
+We get p-value about 0.01, we reject null hypothesis, we can conclude that description missingness likely depends on n_ingredients.
+
 ---
-## Hypothesis Testing
+## Permutation Testing
 #### **Null Hypothesis**: 
 The distribution for high rating recipes's minutes to prepare and low rating recipes's minutes are the same.
 
 #### **Alternative Hypothesis**: 
 The distribution for high rating recipes's minutes to prepare and low rating recipes's minutes are not the same.
 
-#### **Test Statistic**:
+#### **Test Statistic**: K-S Statistic
 #### **Significance level**: 
-0.01(1%)
+0.05(or 5%)
 #### **the resulting p-value**: 
 6.5 * 10^-27
 #### Conclusion: 

@@ -31,7 +31,7 @@ Report the number of rows in the dataset, the names of the columns that are rele
 ### Data Cleaning
 #### Data Cleaning Steps: 
 1.  In the getting the data part, we have two dataframes, `'recipes'` and `'interactions'`. Left merge them.
-2.  In the merged dataset, fill all ratings of 0 with np.nan. This is **neccessary** because if a recipe is rated 0, a review that rates the recipe may entered the rating or may not. So it can be seen as a column containing missing values.
+2.  In the merged dataset, fill all ratings of 0 with np.nan. This is **neccessary** because if a recipe is rated 0, it means a reviewer did not enter the rating. So it can be seen as a column containing missing values.
 3.  Find the average rating of invidividual recipes and add this Series as `'rating'` column to recipes dataframe. We will use the average rating `'rating'` in the analysis part.
 4.  Originally, `'nutrition'` contains nutritions as a list of values. We create individual columns for every unique nutritions.
 5.  We create the column `'rating > 3'`, which stores boolean values to indicate whether the rating is greater than 3. If rating is greater than 3, we define it as a high-rating recipe, otherwise a low-rating recipe. This information will be used in our analysis. 
@@ -69,6 +69,10 @@ Explain your reasoning and any additional data you might want to obtain that cou
 
 ### Missingness Dependency
 K-S statistic
+#### Results of Missingness Permutation Tests
+```py
+ks_2samp(recipes_df.loc[recipes_df['description missing'] == True, 'n_steps'], recipes_df.loc[recipes_df['description missing'] == False, 'n_ingredients'])
+```
 #### Plot
 <iframe src="assets/ms_depend_plot.html" width=650 height=400 frameBorder=0></iframe>
  

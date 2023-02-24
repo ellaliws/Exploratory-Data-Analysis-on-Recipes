@@ -64,8 +64,9 @@ The distributions of minutes between high_rating recipes and low_rating recipes 
 
 ## Assessment of Missingness
 ### NMAR Analysis
-`'rating'` column is NMAR
-Explain your reasoning and any additional data you might want to obtain that could explain the missingness (thereby making it MAR).
+We believe the `'rating'` column is not missing at random(NMAR), the chance that a value is missing depends on the actual missing value. For example, the user is less likely to fill in a 3 when they feel neutral towards the recipe, compared to 5 and 1 when they are extremely satified or dissatisfied.
+
+any additional data you might want to obtain that could explain the missingness (thereby making it MAR).
 
 ### Missingness Dependency
 K-S statistic

@@ -107,7 +107,7 @@ The distribution for high rating recipes's minutes to prepare and low rating rec
 The distribution for high rating recipes's minutes to prepare and low rating recipes's minutes are not the same.
 
 #### **Test Statistic**: K-S Statistic
-The Kolmogorov-Smirnov test statistic measures the similarity between two distributions. 
+The Kolmogorov-Smirnov test statistic measures the similarity between two distributions. We have two distributions of minutes, which are labeled high-rating and low rating(two dimensions). We selected K-S Statistic to compare our two distributions and see if they differ. 
 
 #### **Significance level**: 
 0.05(or 5%)
@@ -117,8 +117,6 @@ The Kolmogorov-Smirnov test statistic measures the similarity between two distri
 p value is close to 0.00, less than the threshold of 0.05, therefore we reject the null. There is likely a relationship between recipes's rating and recipes's cooking time.
 
 Since we reject null, the difference in distribution of minutes for rating > 3 and rating <= 3 is not due to random chance. There is probably a relationship between a recipe's rating and its cooking time.
-
-**Justify** why these choices are good choices for answering the question you are trying to answer.
 
 
 ---

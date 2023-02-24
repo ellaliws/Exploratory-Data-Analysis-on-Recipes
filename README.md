@@ -3,28 +3,17 @@ a project for DSC 80 at UCSD
 ---
 ## Introduction
 introduction to your dataset
-Analysis Question: What is the relationship between the cooking time and average rating of recipes? Do recipes have higher ratings tend to take shorter time than the recipes of lower ratings? (Do recipes that take shorter time have higher ratings?)
-
+Analysis Question: Is there a relationship between the preparing time and average rating of recipes?
 
 Why should readers of your website care about the dataset and your question specifically?
 Report the number of rows in the dataset, the names of the columns that are relevant to your question, and 
 
 ### descriptions of relevant columns:
 `'name'` : Recipe name
-`'id'`
-`'rating'` 
-`'minutes'`
-| Column            | Description                             |
-|:------------------|----------------------------------------:|
-| `'name'`          | Recipe name                             |
-| `'id'`            | Recipe ID                               |
-| `'rating'`        | Average Rating of the recipe as floats  |
-| `'minutes'`       | Minutes to prepare recipe as integers   |
+`'id'`: Recipe ID
+`'rating'` : Average Rating of the recipe as floats
+`'minutes'` : Minutes to prepare recipe as integers
 
-
-| Syntax | Description |
-| ----------- | ----------- |
-| `'name'` | Recipe name |
 ---
 
 ## Cleaning and EDA
@@ -63,10 +52,18 @@ plot
 **explanation**
 The distributions of minutes between high_rating recipes and low_rating recipes are similar. In other words, no matter the recipe is rated high or low, they have similar trend that most recipes take under 60 minutes, and there are fewer recipes that take longer time. There is no obvious differences between high and low ratings of a recipe by looking at how long it takes.
 
-(1-2 sentence explanation about your plot(making sure to describe and interpret any trends present)
 
 ### Interesting Aggregates
-
+#### Pivot Table
+|   rating |   ('mean', 'minutes') |   ('count', 'minutes') |
+|---------:|----------------------:|-----------------------:|
+|        1 |               95.7864 |                    590 |
+|        2 |               98.6    |                    775 |
+|        3 |               96.3054 |                   2760 |
+|        4 |              106.359  |                  20924 |
+|        5 |              114.329  |                  56124 |
+#### Explanation
+The pivot table shows that it does seem like there is a trend where the higher ratings (4 and 5) takes longer time to prepare.
 
 ## Assessment of Missingness
 ### NMAR Analysis

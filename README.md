@@ -2,8 +2,7 @@
 a project for DSC 80 at UCSD
 ---
 ## Introduction
-introduction to your dataset
-Analysis Question: Is there a relationship between the preparing time and average rating of recipes?
+**Analysis Question:** Is there a relationship between the preparing time and average rating of recipes?
 
 Why should readers of your website care about the dataset and your question specifically?
 
@@ -73,16 +72,18 @@ We believe the `'rating'` column is not missing at random(NMAR), the chance that
 any additional data you might want to obtain that could explain the missingness (thereby making it MAR).
 
 ### Missingness Dependency
-#### Comparing null and non-null `'description'` distributions for `'n_ingredients'`
+
+**Comparing null and non-null `'description'` distributions for `'n_ingredients'`**.
 We use **K-S statistic** to identify missingness of `'description'` 
+In our permutation test of testing `'description'`'s missingness dependency on `'n_ingredients'`
+Our null hypothesis is: `'description'` missingness does not depend on `'n_ingredients'`
+We get p-value about 0.01, we reject null hypothesis, we can conclude that description missingness likely depends on n_ingredients.
+
 #### Results of Missingness Permutation Tests
-```py
-ks_2samp(recipes_df.loc[recipes_df['description missing'] == True, 'n_steps'], recipes_df.loc[recipes_df['description missing'] == False, 'n_ingredients'])
-```
-#### Plot: 
+
+Plot of K-S Distribution: 
 <iframe src="assets/ks_fig.html" width=700 height=400 frameBorder=0></iframe>
-<iframe src="assets/ms_depend_plot.html" width=700 height=400 frameBorder=0></iframe>
- 
+
 ---
 ## Hypothesis Testing
 #### **Null Hypothesis**: 

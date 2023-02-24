@@ -63,7 +63,7 @@ The distributions of minutes between high_rating recipes and low_rating recipes 
 #### Pivot Table
 ---
   |   rating |   ('mean', 'minutes') |   ('count', 'minutes') |
-  |---------:|----------------------:|-----------------------:|
+  |---------:|:----------------------|-----------------------:|
   |        1 |               95.7864 |                    590 |
   |        2 |               98.6    |                    775 |
   |        3 |               96.3054 |                   2760 |

@@ -53,7 +53,7 @@ plot
 ### Bivariate Analysis
 plot
 <iframe src="assets/bivariate_plot.html" width=600 height=400 frameBorder=0></iframe>
-</iframe>
+
 **explanation**
 The distributions of minutes between high_rating recipes and low_rating recipes are similar. In other words, no matter the recipe is rated high or low, they have similar trend that most recipes take under 60 minutes, and there are fewer recipes that take longer time. There is no obvious differences between high and low ratings of a recipe by looking at how long it takes.
 
@@ -69,6 +69,7 @@ Explain your reasoning and any additional data you might want to obtain that cou
 
 ### Missingness Dependency
 K-S statistic
+<iframe src="assets/ms_depend_plot.html" width=600 height=400 frameBorder=0></iframe>
 ### 
 ---
 ## Hypothesis Testing

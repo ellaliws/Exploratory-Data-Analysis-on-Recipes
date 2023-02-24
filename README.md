@@ -52,7 +52,7 @@ plot
 1-2 sentence explanation about your plot
 ### Bivariate Analysis
 plot
-<iframe src="assets/bivariate_plot.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/bivariate_plot.html" width=600 height=400 frameBorder=0></iframe>
 </iframe>
 **explanation**
 The distributions of minutes between high_rating recipes and low_rating recipes are similar. In other words, no matter the recipe is rated high or low, they have similar trend that most recipes take under 60 minutes, and there are fewer recipes that take longer time. There is no obvious differences between high and low ratings of a recipe by looking at how long it takes.
@@ -63,6 +63,13 @@ The distributions of minutes between high_rating recipes and low_rating recipes 
 
 
 ## Assessment of Missingness
+### NMAR Analysis
+`'rating'` column is NMAR
+Explain your reasoning and any additional data you might want to obtain that could explain the missingness (thereby making it MAR).
+
+### Missingness Dependency
+
+### 
 ---
 ## Hypothesis Testing
 #### **Null Hypothesis**: 

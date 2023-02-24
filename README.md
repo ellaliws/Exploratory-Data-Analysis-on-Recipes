@@ -108,7 +108,9 @@ The distribution for high rating recipes's minutes to prepare and low rating rec
 #### **the resulting p-value**: 
 0.0
 #### Conclusion: 
-p value is close to 0.0 is less than the threshold of 0.05 therefore we reject the null. There is likely a relationship between recipes's rating and recipes.
+p value is close to 0.00, less than the threshold of 0.05, therefore we reject the null. There is likely a relationship between recipes's rating and recipes's cooking time.
+
+Since we reject null, the difference in distribution of minutes for rating > 3 and rating <= 3 is not due to random chance. There is probably a relationship between a recipe's rating and its cooking time.
 
 **Justify** why these choices are good choices for answering the question you are trying to answer.
 

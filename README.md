@@ -48,8 +48,11 @@ Report the number of rows in the dataset, the names of the columns that are rele
 |  4 | 2000 meatloaf                        | 475785 |        90 |        5 | True         |          267   | False           |
 
 ### Univariate Analysis
-plot
+#### Plot
 1-2 sentence explanation about your plot
+<iframe src="assets/rating_plot.html" width=650 height=400 frameBorder=0></iframe>
+<iframe src="assets/plot_min.html" width=650 height=400 frameBorder=0></iframe>
+
 ### Bivariate Analysis
 plot
 <iframe src="assets/bivariate_plot.html" width=650 height=400 frameBorder=0></iframe>

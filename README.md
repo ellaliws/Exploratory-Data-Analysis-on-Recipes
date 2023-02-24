@@ -13,6 +13,9 @@ We have 83782 **rows** in the dataset, and the relevant columns are
 - `'rating'` : Average Rating of the recipe as floats
 - `'minutes'` : Minutes to prepare recipe as integers
 - `'nutrition'` : Nutrition information in the form [calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV), carbohydrates (PDV)]; PDV stands for “percentage of daily value”
+- `'description'` : User-provided description
+- `'n_ingredients'` : number of ingredients in the recipe
+
 
 ---
 
@@ -61,13 +64,13 @@ The distributions of minutes between high_rating recipes and low_rating recipes 
 
 ### Interesting Aggregates
 #### Pivot Table
-|   rating |   ('mean', 'minutes') |   ('count', 'minutes') |
-|---------:|----------------------:|-----------------------:|
-|        1 |               95.7864 |                    590 |
-|        2 |               98.6    |                    775 |
-|        3 |               96.3054 |                   2760 |
-|        4 |              106.359  |                  20924 |
-|        5 |              114.329  |                  56124 |
+  |   rating |   ('mean', 'minutes') |   ('count', 'minutes') |
+  |---------:|----------------------:|-----------------------:|
+  |        1 |               95.7864 |                    590 |
+  |        2 |               98.6    |                    775 |
+  |        3 |               96.3054 |                   2760 |
+  |        4 |              106.359  |                  20924 |
+  |        5 |              114.329  |                  56124 |
 
 **Explanation:**
 The pivot table shows that it does seem like there is a trend where the higher ratings (4 and 5) takes longer time to prepare.

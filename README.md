@@ -9,10 +9,10 @@ Why should readers of your website care about the dataset and your question spec
 
 ### Dataset Information
 We have 83782 **rows** in the dataset, and the relevant columns are 
-`'name'` : Recipe name
-`'id'`: Recipe ID
-`'rating'` : Average Rating of the recipe as floats
-`'minutes'` : Minutes to prepare recipe as integers
+- `'name'` : Recipe name
+- `'id'`: Recipe ID
+- `'rating'` : Average Rating of the recipe as floats
+- `'minutes'` : Minutes to prepare recipe as integers
 
 ---
 

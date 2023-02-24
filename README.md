@@ -27,7 +27,8 @@ We have 83782 **rows** in the dataset, and the relevant columns are
 3.  Find the average rating of invidividual recipes and add this Series as `'rating'` column to recipes dataframe. We will use the average rating `'rating'` in the analysis part.
 4.  Originally, `'nutrition'` contains nutritions as a list of values. We create individual columns for every unique nutritions.
 5.  We create the column `'rating > 3'`, which stores boolean values to indicate whether the rating is greater than 3. If rating is greater than 3, we define it as a high-rating recipe, otherwise a low-rating recipe. This information will be used in our analysis. 
-6. For our Bivariate Analysis, we want to know whether a recipe's calories is high or low. We define a recipe that has at least 400 calores to be a high-calorie recipe. Therefore, we create a column high_calories, which stores boolean values to indicate whether the recipe is a high-calorie recipe or not.
+6.  We create the column `'description missing'`, which stores boolean values to indicate whether the description is missing. This information will be used in our missingness analysis.
+7. For our Bivariate Analysis, we want to know whether a recipe's calories is high or low. We define a recipe that has at least 400 calores to be a high-calorie recipe. Therefore, we create a column high_calories, which stores boolean values to indicate whether the recipe is a high-calorie recipe or not.
 
 #### Cleaned Dataframe
 **Note**: this dataframe shows only relevant columns in the cleaned dataframe instead of the whole dataframe
@@ -59,6 +60,12 @@ Plot the distributions of minutes of high_rating and low_rating recipes
 **explanation**
 The distributions of minutes between high_rating recipes and low_rating recipes are similar. In other words, no matter the recipe is rated high or low, they have similar trend that most recipes take under 60 minutes, and there are fewer recipes that take longer time. There is no obvious differences between high and low ratings of a recipe by looking at how long it takes.
 
+Plot the distributions of recipes' preparation time of high calories and high calories
+<iframe src="assets/bivariate_plot2.html" width=700 height=400 frameBorder=0></iframe>
+
+**explanation**
+There appears to be a difference between how many ingredients are in high-calories recipes and non-high-calories recipes
+high_caloreies food tend to have more ingredients.
 
 ### Interesting Aggregates
 #### Pivot Table

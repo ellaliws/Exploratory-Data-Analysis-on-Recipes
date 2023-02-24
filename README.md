@@ -10,12 +10,11 @@ a project for DSC 80 at UCSD
 We have 83782 **rows** in the dataset, and the relevant columns are 
 - `'name'` : Recipe name
 - `'id'`: Recipe ID
-- `'rating'` : Average Rating of the recipe as floats
 - `'minutes'` : Minutes to prepare recipe as integers
 - `'nutrition'` : Nutrition information in the form [calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV), carbohydrates (PDV)]; PDV stands for “percentage of daily value”
 - `'description'` : User-provided description
 - `'n_ingredients'` : number of ingredients in the recipe
-
+- `'rating'` : Average Rating of the recipe as floats
 
 ---
 
@@ -31,13 +30,6 @@ We have 83782 **rows** in the dataset, and the relevant columns are
 
 #### Cleaned Dataframe
 **Note**: this dataframe shows only relevant columns in the cleaned dataframe instead of the whole dataframe
-|    | name                                 |     id |   minutes |   rating | rating > 3   |   calories (#) | high_calories   |
-|---:|:-------------------------------------|-------:|----------:|---------:|:-------------|---------------:|:----------------|
-|  0 | 1 brownies in the world    best ever | 333281 |        40 |        4 | True         |          138.4 | False           |
-|  1 | 1 in canada chocolate chip cookies   | 453467 |        45 |        5 | True         |          595.1 | True            |
-|  2 | 412 broccoli casserole               | 306168 |        40 |        5 | True         |          194.8 | False           |
-|  3 | millionaire pound cake               | 286009 |       120 |        5 | True         |          878.3 | True            |
-|  4 | 2000 meatloaf                        | 475785 |        90 |        5 | True         |          267   | False           |
 
 ---
 
@@ -69,6 +61,7 @@ The distributions of minutes between high_rating recipes and low_rating recipes 
 
 ### Interesting Aggregates
 #### Pivot Table
+---
   |   rating |   ('mean', 'minutes') |   ('count', 'minutes') |
   |---------:|----------------------:|-----------------------:|
   |        1 |               95.7864 |                    590 |
@@ -76,6 +69,8 @@ The distributions of minutes between high_rating recipes and low_rating recipes 
   |        3 |               96.3054 |                   2760 |
   |        4 |              106.359  |                  20924 |
   |        5 |              114.329  |                  56124 |
+
+---
 
 **Explanation:**
 The pivot table shows that it does seem like there is a trend where the higher ratings (4 and 5) takes longer time to prepare.
@@ -111,6 +106,8 @@ The distribution for high rating recipes's minutes to prepare and low rating rec
 The distribution for high rating recipes's minutes to prepare and low rating recipes's minutes are not the same.
 
 #### **Test Statistic**: K-S Statistic
+The Kolmogorov-Smirnov test statistic measures the similarity between two distributions. 
+
 #### **Significance level**: 
 0.05(or 5%)
 #### **the resulting p-value**: 

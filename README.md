@@ -1,5 +1,5 @@
 # Data Analysis on Recipes Rating and Preparation Time
-a project for DSC 80 at UCSD
+a project for DSC 80 at UCSD. A direction to pick up a good recipe💓
 ---
 ## Introduction
 **Analysis Question:** Is there a relationship between the preparing time and average rating of recipes?
@@ -113,9 +113,8 @@ The Kolmogorov-Smirnov test statistic measures the similarity between two distri
 0.05(or 5%)
 #### **the resulting p-value**: 
 0.0
-#### Conclusion: 
+#### **Conclusion**: 
 p value is close to 0.00, less than the threshold of 0.05, therefore we reject the null. There is likely a relationship between recipes's rating and recipes's cooking time.
-
 Since we reject null, the difference in distribution of minutes for rating > 3 and rating <= 3 is not due to random chance. There is probably a relationship between a recipe's rating and its cooking time.
 
 

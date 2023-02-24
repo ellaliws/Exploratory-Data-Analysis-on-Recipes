@@ -6,9 +6,9 @@ introduction to your dataset
 Analysis Question: Is there a relationship between the preparing time and average rating of recipes?
 
 Why should readers of your website care about the dataset and your question specifically?
-Report the number of rows in the dataset, the names of the columns that are relevant to your question, and 
 
-### descriptions of relevant columns:
+### Dataset Information
+We have 83782 **rows** in the dataset, and the relevant columns are 
 `'name'` : Recipe name
 `'id'`: Recipe ID
 `'rating'` : Average Rating of the recipe as floats
@@ -37,8 +37,8 @@ Report the number of rows in the dataset, the names of the columns that are rele
 |  4 | 2000 meatloaf                        | 475785 |        90 |        5 | True         |          267   | False           |
 
 ### Univariate Analysis
-#### Plot: 
-1-2 sentence explanation about your plot
+#### Plots of Distributions: 
+we care about the distribution of rating and minutes to answer our analysis question. So we plot these two distributions.
 <iframe src="assets/rating_plot.html" width=700 height=400 frameBorder=0></iframe>
 **Explanation:** The average of mean rating for all recipes is 4.63, the distribution is left skewed, majority of the ratings are positive. 
 
@@ -62,7 +62,8 @@ The distributions of minutes between high_rating recipes and low_rating recipes 
 |        3 |               96.3054 |                   2760 |
 |        4 |              106.359  |                  20924 |
 |        5 |              114.329  |                  56124 |
-#### Explanation
+
+**Explanation:**
 The pivot table shows that it does seem like there is a trend where the higher ratings (4 and 5) takes longer time to prepare.
 
 ## Assessment of Missingness
@@ -85,13 +86,20 @@ ks_2samp(recipes_df.loc[recipes_df['description missing'] == True, 'n_steps'], r
 ---
 ## Hypothesis Testing
 #### **Null Hypothesis**: 
+The distribution for high rating recipes's minutes to prepare and low rating recipes's minutes are the same.
+
 #### **Alternative Hypothesis**: 
+The distribution for high rating recipes's minutes to prepare and low rating recipes's minutes are not the same.
+
 #### **Test Statistic**:
 #### **Significance level**: 
 0.01(1%)
-#### **the resulting p-value**:
+#### **the resulting p-value**: 
+6.5 * 10^-27
 #### Conclusion: 
+p value is less than the threshold of 0.05 therefore we reject the null. There is likely a relationship between recipes's rating and recipes.
 
 **Justify** why these choices are good choices for answering the question you are trying to answer.
+
 
 ---
